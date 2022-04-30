@@ -29,7 +29,7 @@ alias grep='grep --color=auto'
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Bluetooth enable/disable
-alias bton='sudo rfkill unblock bluetooth && sudo systemctl enable bluetooth.service'
+alias bton='sudo rfkill unblock bluetooth && sudo systemctl start bluetooth.service'
 alias btoff='sudo systemctl stop bluetooth.service && sudo rfkill block bluetooth'
 
 # youtube-dl
