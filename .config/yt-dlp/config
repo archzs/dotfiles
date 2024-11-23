@@ -1,0 +1,2 @@
+# Save in ~/downloads
+-o ~/downloads/%(title)s.%(ext)s

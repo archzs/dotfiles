@@ -1,0 +1,33 @@
+#Moonlight
+set color_cmdline_bg=default
+set color_cmdline_fg=default
+
+set color_error=196
+set color_info=26
+set color_separator=246
+
+set color_win_bg=default
+set color_win_fg=255
+
+set color_win_title_bg=234
+set color_win_title_fg=32
+
+set color_win_cur=32
+
+set color_win_sel_bg=235
+set color_win_sel_fg=33
+
+set color_titleline_bg=default
+set color_titleline_fg=33
+
+set color_statusline_bg=default
+set color_statusline_fg=75
+
+set color_win_cur_sel_bg=235
+set color_win_cur_sel_fg=39
+
+set color_win_inactive_cur_sel_bg=233
+set color_win_inactive_cur_sel_fg=39
+
+set color_win_inactive_sel_bg=236
+set color_win_inactive_sel_fg=39

@@ -1,0 +1,21 @@
+set aaa_mode=album
+colorscheme moonlight
+set format_clipped_text=…
+set format_current= %a - %l%! - %t
+set format_heading_album=%a - %l%= %y %d
+set format_heading_artist=%a%= %d
+set format_heading_playlist=%{?!panel?Playlist - }%{title}%= %d
+set format_playlist= %-25%a %t%= %y  %d 
+set format_playlist_va= %-25%a %t%= %y  %d 
+set format_statusline= %{status} %{?show_playback_position?%{position} %{?duration?/ %{duration} }?%{?duration?%{duration} }}%= %{?repeat_current?repeat current?%{?play_library?%{?playlist_mode!="all"?%{playlist_mode} from }%{?play_sorted?sorted }library?playlist}} | %1{continue}%1{follow}%1{repeat}%1{shuffle} 
+set format_trackwin=%3n. %t%= %d 
+set format_trackwin_album=%{?y? %l %= %y %{?duration<36000?%6d?%7d} ? %l %= %d }
+set format_trackwin_va=%{?tracknumber>0?%3n. %t %= %a %12d ?  -  %t %= %a %12d }
+set format_treewin=  %l
+set format_treewin_artist=%A
+set pause_on_output_change=true
+set pl_env_vars=HOME
+set progress_bar=disabled
+set search_resets_position=false
+set show_playback_position=true
+set show_remaining_time=false
