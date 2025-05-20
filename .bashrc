@@ -39,6 +39,9 @@ alias btoff='sudo systemctl stop bluetooth.service && sudo rfkill block bluetoot
 
 alias qq='qview'
 
+# cmus with lamp-drpc
+alias cmusd='/home/zera/workspace/lamp-drpc/target/release/lamp-drpc 2>/dev/null & disown && cmus'
+
 # yt-dlp
 # Convert video to mp3
 mp3 () {
@@ -104,4 +107,27 @@ brpc () {
         echo $(unzip -o -P "$line" "$1")
     done < pass &> ptest
     vim -c ':%s/[0-9]*\n\n  error:.*\n bad CRC.*\n    (may.*\nArchive.*//g | :%s/[0-9]*\n bad CRC.*\n    (may.*\nArchive.*//g | :%s/checking pw.*\n   skipping.*\nArchive.*//g | :%s/[0-9]*\n(incomplete.*\n  error.*//g | :g/[0-9]*\nArchive.*/m0 | :wq' ptest
+    head -n 1 ptest
+}
+
+jpg () {
+    if [[ -d "$1" ]]
+    then
+        for f in "$1"/*; do
+            if [ "${f##*.}" != "jpg" ]
+            then
+                echo "Converting $f"
+                jpg_file="${f%.*}.jpg"
+                magick "$f" "$jpg_file" && rm "$f"
+            fi
+        done
+    elif [[ -f "$1" ]]
+    then
+        if [ "${1##*.}" != "jpg" ]
+        then
+          echo "Converting $1"
+          jpg_file="${1%.*}.jpg"
+          magick "$1" "$jpg_file" && rm "$1"
+        fi
+    fi
 }
